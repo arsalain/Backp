@@ -1,23 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router,Routes,Route} from "react-router-dom"
+import Home from './Pages/Home/Home';
+import Trek from './Pages/Trek/Trek';
+import About from './Pages/About/About';
+import Contact from './Pages/Contact/Contact';
+import PrivateRoute from './PrivateRoute';
+import UserHome from './Pages/UserHome/UserHome';
+import Product from './Pages/Productpage/Product';
+import ForgotPassword from './Pages/ForgotPassword/ForgotPassword';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   
+      <Routes >
+  
+        <Route path='/' element={<Home /> }/>
+        <Route path='/trek' element={<Trek /> }/>
+        <Route path='/about' element={<About /> }/>
+        <Route path='/contact' element={<Contact /> }/>
+        <Route path='/dest' element={<Product /> }/>
+        <Route path="/forgotpassword/:id/:token" element={<ForgotPassword/>} />
+
+        <Route path='/user' element={<PrivateRoute /> } >
+          <Route path='home' element={<UserHome /> } ></Route>
+        </Route>
+      </Routes>
     </div>
   );
 }

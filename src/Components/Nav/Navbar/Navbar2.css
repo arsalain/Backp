@@ -1,0 +1,123 @@
+.n-wrapper2 {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left:auto;
+    margin-right:auto;
+
+    /* overflow-x: hidden !important; */
+    position: fixed;
+    /* top: 0; */
+    z-index: 1;
+    /* box-shadow: 0 0 10px black; */
+    /* background-color: white; */
+    color: white;
+    /* padding-left: 50px; */
+    /* background: rgba(0, 0, 0, 0.5) */
+  }
+  .n-wrapper2.active{
+    background-color: #FCB418;
+  }
+  .n-left12 {
+    flex: 4;
+    display: flex;
+    flex-direction: row;
+    float: left;
+    padding-left: 50px;
+    padding-top: 10px;
+  }
+  .n-left2{
+    display: grid;
+    padding-left: 5px;
+    padding-top: 10px;
+
+  }
+  .n-name2 {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  .n-img2{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-top: 10px;
+    /* border: 1px solid white; */
+  }
+.n-name12 {
+  display:grid;
+  grid-template-columns:repeat(3,60px);
+  align-items: center;
+  font-weight: bold;
+  color: red;
+  font-size: 12px;
+  top:-40px;
+  padding-top: -10px;
+  /* margin-left: 10px */
+}
+  .n-name12::before {
+      content:"";
+      display:block;
+      height:2px;
+      background-color:#fff;
+  }
+  .n-name12::after{
+    content:"";
+      display:block;
+      height:2px;
+      background-color:#fff;
+      padding-left: -30px;
+  }
+ 
+  .n-right2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 400;
+    padding-right: 50px;
+  }
+  
+  .n-list2 {
+    flex: 6;
+  }
+  .n-list2 > ul {
+    display: flex;
+    gap: 2rem;
+    /* margin-right: 4rem; */
+  }
+  
+  .n-list2 > ul :hover {
+    cursor: pointer;
+  }
+  .n-login2{
+    /* padding-left: 60px; */
+  }
+ 
+  .n-login2-but{
+    width: 80px;
+    height: 25px;
+    text-decoration: none;
+    border: none;
+    color: black;
+    /* margin-bottom: 50px; */
+  }
+  .n-login2-but:hover {
+    color: black;
+}
+
+
+.mobile-navbar2 {
+  display: none;
+background: transparent;
+cursor: pointer;
+}
+.mobile-nav-icon2 {
+  width: 2rem;
+  height: 2rem;
+  color: black;
+}
+.mobile-nav-icon2[name= "close-outline"]{
+  display: none;
+}

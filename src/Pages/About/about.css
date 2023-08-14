@@ -1,0 +1,119 @@
+.about-head-img{
+    width: 100%;
+    height: 400px;
+    background: url(../../Images/ab.jpg) ;
+    /* color: White; */
+    background-size:cover;
+    background-repeat:no-repeat;
+    display: flex;
+    text-align: center;
+    font-size: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.about-head-title{
+    /* background-color: aliceblue; */
+    text-align: center;
+    padding-top: 50px;
+}
+.about-head-para{
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.about-head-title{
+    font-size: 30px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+.about-body{
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+.about-body-title{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.about-cards{
+    display: flex;
+    flex-direction: row;
+}
+.about-card{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-right: 50px;
+
+}
+.about-card-img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    align-self: center;
+    margin-bottom: 20px;
+}
+.about-card-name{
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.about-card-desig{
+    text-align: center;
+    font-weight: lighter;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+.about-card-logo{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.about-card-logo1{
+    
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+}
+.about-card hr{
+    height: 1px;
+    /* color: #FCB418; */
+    width: 100px;
+    background-color: #FCB418 ;
+    border: none;
+}
+.about-card-para{
+    /* text-align: center; */
+    font-size: 13px;
+}
+.about-cards1{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+}
+.about-card1{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    margin-right: 50px;
+
+}
+.about-card1 hr{
+    height: 1px;
+    /* color: #FCB418; */
+    width: 100px;
+    margin-bottom: 20px;
+    background-color: #FCB418 ;
+    border: none;
+}

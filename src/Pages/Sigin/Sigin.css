@@ -1,0 +1,555 @@
+.sigin-body{
+    height: 600px;
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: fixed;
+    /* background-color: white; */
+    background: White;
+    color: black;
+    align-self: center;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    z-index: 2;
+}
+div{
+    /* display: flex; */
+  }
+.sigin-body-left{
+        height: 100%;
+        width: 450px;
+        background: url(../../Images/sigin.jpeg) ;
+        /* color: White; */
+        background-size:cover;
+        background-repeat:no-repeat;
+        display: flex;
+        flex-direction: column;
+        float: left;
+        color: White;
+        /* justify-content: flex-end; */
+}
+.sigin-left12 {
+    display: flex;
+    flex-direction: row;
+    float: left;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+  .sigin-left-logo{
+    display: grid;
+    padding-left: 5px;
+  }
+  .sigin-left-name2 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .sigin-left-img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid white;
+  }
+.sigin-left-name12 {
+  display:grid;
+  grid-template-columns:repeat(3,45px);
+  align-items: center;
+  font-weight: bold;
+  color: red;
+  font-size: 10px;
+  top:-40px;
+  padding-top: -10px;
+  /* margin-left: 10px */
+}
+  .sigin-left-name12::before {
+      content:"";
+      display:block;
+      height:2px;
+      background-color:#fff;
+  }
+  .sigin-left-name12::after{
+    content:"";
+      display:block;
+      height:2px;
+      background-color:#fff;
+      padding-left: -30px;
+  }
+.sigin-left-title{
+display: flex;
+font-size: 40px;
+padding-left: 40px;
+padding-bottom: 20px;
+padding-top: 330px;
+/* align-self: flex-end; */
+}
+.sigin-left-title1{
+    display: flex;
+    font-size: 20px;
+    padding-left: 40px;
+    padding-bottom: 20px;
+    /* align-self: flex-end; */
+    }
+
+.sigin-body-right{
+    height: 100%;
+    width: 350px;
+    flex-direction: column;
+    display: flex;
+}
+.sigin-right-cancle-but{
+    display: flex;
+    align-self: flex-end;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+.sigin-left-cancle {
+    /* height: 20px;
+    width: 20px; */
+    /* background-color: #fff */
+}
+
+.sigin-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 330px;
+    height: 100%;
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    word-break: break-all;
+    margin-top: 10px;
+    border: none;
+  }
+  
+  .bloc-tabs {
+    display: flex;
+  }
+  .tabs {
+  
+    padding: 15px;
+    text-align: center;
+    width: 50%;
+    cursor: pointer;
+    background-color: #fff;
+    border-right: none !important;
+    box-sizing: content-box;
+    outline: none;
+  }
+  .tabs:not(:last-child){
+    border-right: 1px solid rgba(0, 0, 0, 0.274);
+  }
+  
+  .active-tabs  {
+    background: white;
+    border-bottom: 2px solid #FCB418;
+  }
+  
+  .active-tabs::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% + 2px);
+    height: 2px;
+    /* background: #FCB418 ; */
+  }
+  
+  
+  
+  button {
+    border: none;
+    
+  }
+  .content-tabs {
+    background: white;
+  }
+  .content {
+    background: white;
+    padding: 20px;
+    /* width: 100%;
+    height: 100%; */
+    display: none;
+  }
+  .active-content {
+    display: block;
+  }
+ .sigin {
+    position: relative;
+     width: 100%;
+     display: flex;
+     justify-content: center;
+     /* align-items: center; */
+     flex-direction: column;
+     /* gap: 20px; */
+   }
+   .sigin-title{
+       font-size: 20px;
+       font-weight: bold;
+       padding-left: 5px;
+   }  .form 
+   {
+     width: 100%;
+     display: flex;
+     flex-direction: column;
+     /* gap: 10px; */
+   }
+   .sigin-phone{
+    padding-top: 10px;
+   
+    display: flex;
+    flex-direction: column;
+   }
+   .sigin-phone-title{
+    padding-left: 5px;
+   }
+   .sigin-num{
+      float: left;
+      padding-top: 10px;
+      position: relative;
+   }
+   .sigin-num:after{
+    
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 0.5px;
+    background: rgb(161, 158, 158);
+
+   }
+   .sigin-phone .sigin-num input {
+    border-top: none;
+    border-right:  none;
+    border-left: none;
+    border-bottom: 1px solid rgb(161, 158, 158);
+    width: 237px;
+    outline: none;
+    margin-left: 20px ;
+   }
+    .sigin .form .inputBox
+   {
+     position: relative;
+     width: 100%;
+     padding-top: 10px;
+   
+   }
+    .sigin .form .inputBox input 
+   {
+     position: relative;
+     width: 100%;
+     /* background: #333; */
+     border-top: none;
+     border-right:  none;
+     border-left: none;
+     border-bottom: 1px solid rgb(161, 158, 158);
+     outline: none;
+     /* padding: 25px 10px 7.5px; */
+     padding: 25px 2px 7.5px;
+     margin-right: 50px;
+     /* color: #fff; */
+     font-weight: 500;
+     font-size: 1em;
+     margin-left: 2px ;
+   }
+    .sigin .form .inputBox i 
+   {
+     position: absolute;
+     left: 2%;
+     /* padding: 15px 10px; */
+     top:50%;
+   
+     font-style: normal;
+     color: black;
+     transition: 0.5s;
+     pointer-events: none;
+   }
+   .sigin .form .inputBox input:focus ~ i,
+   .sigin .form .inputBox input:valid ~ i
+   {
+     transform: translateY(-20px);
+     font-size: 0.8rem;
+     color: black;
+   }
+   .inputBox2{
+    padding-top: 20px;
+   }
+   .sigin-terms{
+    font-size: 15px;
+   }
+   .sigin-check{
+    float: left;
+    margin-top: 6px;
+   }
+   .sigin-but {
+    cursor:nwse-resize;
+    margin-top: 30px;
+    background-color: #FCB418;
+    color: #fff;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+  }
+.login
+{
+ position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+  /* gap: 20px; */
+}
+.login-title{
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 5px;
+} 
+ .form 
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* gap: 10px; */
+}
+ .login .form .inputBox
+{
+  position: relative;
+  width: 100%;
+  padding-top: 10px;
+
+}
+ .login .form .inputBox input 
+{
+  position: relative;
+  width: 100%;
+  /* background: #333; */
+  border-top: none;
+  border-right:  none;
+  border-left: none;
+  border-bottom: 1px solid rgb(161, 158, 158);
+  outline: none;
+  /* padding: 25px 10px 7.5px; */
+  padding: 25px 2px 7.5px;
+  margin-right: 50px;
+  /* color: #fff; */
+  font-weight: 500;
+  font-size: 1em;
+  margin-left: 2px ;
+}
+ .login .form .inputBox i 
+{
+  position: absolute;
+  left: 2%;
+  /* padding: 15px 10px; */
+  top:50%;
+
+  font-style: normal;
+  color: black;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.login .form .inputBox input:focus ~ i,
+.login .form .inputBox input:valid ~ i
+{
+  transform: translateY(-20px);
+  font-size: 0.8rem;
+  color: black;
+}
+.login-forgot-but {
+  background: #fff;
+  font-weight: bold;
+  cursor:pointer;
+  color: #FCB418;
+}
+.login-forgot{
+  padding-left: 156px;
+  color: #FCB418;
+  font-size: 14px;
+  font-weight: bold;
+}
+.login-but {
+  margin-top: 30px;
+  background-color: #FCB418;
+  color: #fff;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+}
+.login-or{
+  text-align: center;
+  position: relative;
+  padding: 35px;
+  font-weight: 100;
+  font-size: 14px;
+}
+.login-or:before{
+  content: "";
+  display: block;
+  width: 135px;
+  height: 1px;
+  background: #d7d3d3;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
+.login-or:after{
+  content: "";
+  display: block;
+  width: 135px;
+  height: 1px;
+  background: #d7d3d3;
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+.login-google{
+  width: 100%;
+  height: 40px;
+  background-color: #f2f4f7;
+  display: flex;
+  align-items: center;
+}
+.login-logo{
+  width: 30px;
+  height: 30px;
+  float: left;
+  padding-left: 20px;
+  padding-right: 30px;
+}
+.login-signup{
+  padding-top: 20px;
+  /* padding-left: 90px; */
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.login-acc{
+  float: left;
+}
+.login-up{
+  padding-left: 5px;
+  font-weight: bold;
+}
+.login-up-but{
+  background: #fff;
+  font-weight: bold;
+  cursor:pointer;
+}
+.forgot{
+  display: flex;
+  flex-direction: column;
+}
+.forgot-icon{
+  border-radius: 50%;
+  margin-top: 20px;
+  width: 30px;
+  height: 30px;
+  /* padding-right: 35px; */
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  cursor: pointer;
+}
+.forgot-icon1{
+  color: #FCB418;
+  font-weight:bolder;
+  font-size: 80px;
+
+}
+.forgot-title{
+    font-size: 35px;
+    font-weight: bold;
+    display: flex;
+    align-self: center;
+}
+.forgot-title1{
+  font-size: 13px;
+  font-weight: 300;
+  display: flex;
+  align-self: center;
+}
+.forgot-input .inputBox
+{
+  position: relative;
+  width: 300px;
+  padding-top: 10px;
+  margin-left: 10px;
+
+}
+ .forgot-input .inputBox input 
+{
+  position: relative;
+  width: 100%;
+  /* background: #333; */
+  border-top: none;
+  border-right:  none;
+  border-left: none;
+  border-bottom: 1px solid rgb(161, 158, 158);
+  outline: none;
+  /* padding: 25px 10px 7.5px; */
+  padding: 25px 2px 7.5px;
+  margin-right: 50px;
+  /* color: #fff; */
+  font-weight: 500;
+  font-size: 1em;
+  margin-left: 2px ;
+}
+ .forgot-input .inputBox i 
+{
+  position: absolute;
+  left: 2%;
+  /* padding: 15px 10px; */
+  top:50%;
+
+  font-style: normal;
+  color: black;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.forgot-input .inputBox input:focus ~ i,
+.forgot-input .inputBox input:valid ~ i
+{
+  transform: translateY(-20px);
+  font-size: 0.8rem;
+  color: black;
+}
+.forgot-but {
+  margin-top: 30px;
+  margin-left: 15px;
+  background-color: #FCB418;
+  color: #fff;
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+}
+.return-login{
+  padding-top: 20px;
+  /* padding-left: 90px; */
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.return-acc{
+  float: left;
+}
+.return-up{
+  padding-left: 5px;
+  font-weight: bold;
+}
+.return-up-but{
+  background: #fff;
+  font-weight: bold;
+  cursor:pointer;
+}
