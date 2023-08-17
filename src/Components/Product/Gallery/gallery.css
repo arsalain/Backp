@@ -1,0 +1,114 @@
+.gallery-main{
+    display: flex;
+    flex-direction: column;
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 1100px; */
+    width: 100%;
+    height: 100%;
+    /* min-height: 5000px; */
+    background: #fff;
+    position: fixed;
+    overflow-y: scroll;
+    /* top: 0; */
+    z-index: 4;
+    /* justify-content: center; */
+  }
+  .gallery-maininer {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+  .gallery-main::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+  .gallery-close{
+    height: 50px;
+  }
+  .gallery-close-but{
+    float: right;
+    margin: 10px 0 ;
+    width: 30px;
+    height: 30px;
+  border-radius: 50%;
+  }
+  .gallery-first{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5px;
+  }
+  
+  .gallery-first-img{
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .gallery-first-img:hover{
+    filter: opacity(.9);
+  }
+  
+  .gallery-first-img img{
+    width: 1000px;
+    height: 400px;
+  }
+  
+  .gallery-first-img-title{
+    display: flex;
+    align-self: center; 
+  font-size: 30px;
+  position: absolute;
+  color:#FCB418;
+  font-weight: bold;
+  }
+  
+  .gallery{
+    /* height: 100%; */
+  
+      width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+     -webkit-column-count: 2;
+     -moz-column-count: 2;
+     column-count: 2;
+     column-width: 83%;
+     column-gap: 5px;
+     -webkit-column-width: 83%;
+  
+     -moz-column-width: 83%;
+     /* column-width: 33%; */
+     /* padding: 0 5px;  */
+  }
+  
+  .pics{
+    -webkit-transition: all 350ms ease;
+    transition: all 350ms ease;
+    /* cursor: pointer; */
+    margin-bottom: 10px;
+  }
+  .pics-img:hover{
+    filter: opacity(.9);
+  }
+  @media (max-width: 991px) {
+    .gallery{
+      margin-left: auto;
+      margin-right: auto;
+       -webkit-column-count: 2;
+       -moz-column-count: 2;
+       column-count: 2;
+    }
+    
+  }
+  @media (max-width: 480px) {
+    .gallery{
+      margin-left: auto;
+      margin-right: auto;
+       -webkit-column-count: 2;
+       -moz-column-count: 2;
+       column-count: 2;
+       -webkit-column-width: 100%;
+       -moz-column-width: 100%;
+       padding: 0 12px;
+    }
+    
+  }
+  
