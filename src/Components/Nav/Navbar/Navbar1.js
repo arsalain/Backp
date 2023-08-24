@@ -25,7 +25,11 @@ const Navbar1 = () =>{
       
   }
 
- 
+  const [toggle, setToggle]=useState(true);
+
+  const handleToggle=()=>{
+    setToggle(!toggle);
+  }
   
   return (
     <>
@@ -75,8 +79,8 @@ const Navbar1 = () =>{
                             onClick={() => setisMobile(false)}/>
                             
                             </div> */}
-                            <div className="mobile-navbar">
-                <CgCloseR  className='mobile-nav-icon' />:   <CgMenu className='mobile-nav-icon' /> 
+                            <div className="mobile-navbar" onClick={handleToggle}>
+                            {toggle?    <CgCloseR  className='mobile-nav-icon' />:   <CgMenu className='mobile-nav-icon' /> } 
 
                             </div>
         </div> 

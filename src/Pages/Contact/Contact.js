@@ -4,6 +4,7 @@ import Navbar1 from '../../Components/Nav/Navbar/Navbar1'
 import {GiPolarStar} from "react-icons/gi"
 import Footer from '../../Components/Nav/Footer/Footer'
 import cp from "../../Images/contact.jpg"
+import Navbar2 from '../../Components/Nav/Navbar/Navbar2'
 const Contact = () => {
   return (
     <div className='contact'>

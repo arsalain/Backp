@@ -1,7 +1,6 @@
 .f-body{
-    margin-top: 100px;
-    padding-top: 100px;
-    padding-bottom: 150px;
+    margin-top: 50px;
+    padding-top: 50px;
     max-width: 1300px;
     margin-left: auto;
     margin-right: auto;
@@ -15,12 +14,17 @@
 display: flex;
 flex-direction: row;
 gap: 30px;
-
+padding-left: 10px;
+}
+.f-bottom{
+  display: flex;
+  flex-direction: column;
 }
 .f-logo {
   display: flex;
   flex-direction: row;
 }
+
 .f-left {
 
   justify-content: left;
@@ -31,35 +35,56 @@ gap: 30px;
 }
 
 .f-name {
-  font-size: 28px;
+  font-size: 24px;
   font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
 }
 .f-img{
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  border: 1px solid white;
-  margin-right: 10px;
   margin-left: 40px;
 }
-
-
-    .f-name1 {
-      display:grid;
-      grid-template-columns:repeat(3,70px);
-      align-items: center;
-      font-weight: bold;
-      color: red;
-    
-    }
-      .f-name1::before, .f-name1::after {
-          content:"";
-          display:block;
-          height:2px;
-          background-color:#fff;
+      .f-logo-name-main{
+        display: flex;
+        flex-direction: column;
+        width: 190px;
+      }
+      .f-name1{
+        text-align: center;
+        position: relative;
+        font-size: 14px;
+        top: -6px;
+        font-weight:500;
+        color: red;
+        font-family: 'Montserrat', sans-serif;
+      }
+      .f-name1:before{
+        content: "";
+        display: block;
+        width: 65px;
+        height: 2px;
+        background: white;
+        position: absolute;
+        left: 0;
+        top: 50%;
+      }
+      .f-name1:after{
+        content: "";
+        display: block;
+        width: 65px;
+        height: 2px;
+        background: white;
+        position: absolute;
+        right: 0;
+        top: 50%;
       }
 .f-name2{
-  margin-top: 20px;
+  /* margin-top: 20px; */
+}
+.f-mid-main{
+  display: flex;
+  flex-direction: row;
 }
   .f-mid{
     display: flex;
@@ -77,21 +102,14 @@ gap: 30px;
     font-size: 18px;
     padding-bottom: 10px;
   }
-  .f-mid{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    /* padding-top: 100px; */
-    padding-left: 50px;
-  }
-
+.f-footer{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
   .f-dot {
-    margin-top: 50px;
-    margin-left: 50px;
-    height: 70px;
-    width: 70px;
-    background-color: rgb(245, 168, 25);
-    border-radius: 50%;
+    margin-top: 15px;
+    color: #FCB418;
     float: left;
     display: flex;
     align-items: center;
@@ -99,26 +117,105 @@ gap: 30px;
     /* display: inline-block; */
   }
   .f-dot1 {
-    margin-top: 50px;
-    margin-left: 20px;
-    height: 70px;
-    width: 70px;
-    background-color: rgb(245, 168, 25);
-    border-radius: 50%;
+    margin-top: 15px;
+    margin-left: 30px;
     float: left;
     display: flex;
     align-items: center;
     justify-content:center ;
+    color: #FCB418;
     /* display: inline-block; */
   }
   .f-end{
-    padding-top: 100px;
+    margin-top: 50px;
     font-size: 15px;
     justify-content: center;
+    align-items: center;
     display: flex;
+    background-color: white;
+    color:  black;
+    font-weight: bold;
+    /* background: #FCB418; */
+  }
+  .f-end-name{
+    color: #FCB418;
+  }
+  .f-end-name1{
+    color: red;
   }
   .f-dot-icon{
     font-size: 26px;
+   
   }
+  @media only screen and  (min-width:500px) and (max-width: 999px) {
+    .f-head{
+      flex-direction: column;
+      align-items: center;
+    }
+    .f-mid-main{
+      margin-top: 30px;
+      /* margin-left: 50px; */
+    }
+    .f-footer{
+      display: flex;
+      justify-self: center;
+    }
+    .f-mid{
+      align-items: center;
+    }
+    .f-mid-name{
+      padding-bottom: 20px;
+    }
+  .f-dot{
+    margin-top: 30px;
+  }
+  .f-dot1{
+    margin-left: 30px;
+    margin-top: 30px;
+  }
+  .f-end{
+    padding-left: 50px;
+    padding-top: 70px;
 
+  }
+  }
+  @media only screen and (max-width: 480px) {
+    .f-head{
+      flex-direction: column;
+      align-items: center;
+    }
+    .f-img {
+      margin-left: 0;
+    }
+    .f-mid-main{
+      /* flex-direction: column; */
+      margin-left: 20px;
+    }
+    .f-mid{
+      align-items: center;
+      padding-top: 0;
+      padding-left: 0;
+      padding-right: 20px;
+    }
+    .f-mid-name{
+     padding-bottom: 30px;
+    }
+    .f-footer{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .f-dot{
+      margin-top: 20px;
+      margin-left: 10px;
+    }
+    .f-dot1{
+      margin-left: 30px;
+      margin-top: 20px;
+    }
+    .f-end{
+      padding-left: 30px;
+      padding-top: 80px;
+    }
+  }
   

@@ -97,9 +97,9 @@ width: 330px;
 .trek-but-icon{
         font-size: 30px ;
 }
-button.rec-dot {
+/* button.rec-dot {
         display: none;
-}
+} */
 .trek-card{
         display:flex;
         flex-direction: column;

@@ -112,7 +112,7 @@ cursor: pointer;
 
   .n-wrapper {
       padding: 0 2rem;
-      background-color: orange;
+      background-color: #FCB418;
   }
   h5 span {
     display:inline-block;
@@ -130,7 +130,7 @@ h5:before {
     display : block;
     /* width: 400px;
     height: 100px; */
-    color: black !important;
+    color: white !important;
     /* padding-top: 20px; */
     /* margin-right: 450px; */
   }

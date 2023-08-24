@@ -1,0 +1,167 @@
+.dest-sim{
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+}
+.dest-sim-title{
+    font-weight: bold;
+    /* font-size: 40px; */
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+.dest-sim-content{
+    display: flex;
+    flex-direction: row;
+  
+}
+.dest-sim-card{
+    display: flex;
+    flex-direction: column;
+    height: 450px;
+    width: 360px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    margin-left: 50px;
+    float: left;
+    border-radius: 20px;
+    background-color: black;
+}
+.dest-sim-card-img{
+    width: 360px;
+    height: 300px;
+    border-top-left-radius:20px ;
+    border-top-right-radius: 20px;
+}
+.dest-sim-card-name{
+    /* border-top: 1px solid white ; */
+    margin-top: 2px ;
+    border-right:2px solid black ;
+    border-left:2px solid black ;
+    font-size: 20px;
+    /* padding-left: 130px; */
+    border-radius: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    /* color: white; */
+    justify-content: center;
+    background-color: white;
+    font-weight: 500;
+}
+.dest-sim-card-amount{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-left: 75px;
+    /* justify-content: center; */
+}
+.dest-sim-card-t {
+    color: white;
+    display: flex;
+    align-items: center;
+  
+    /* padding-left: 90px; */
+}
+.dest-sim-card-t-icon{
+    padding-right: 2px;
+}
+.dest-sim-card-amount1{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-left: 65px;
+    /* justify-content: center; */
+}
+.dest-sim-card-t1 {
+    color: white;
+    display: flex;
+    align-items: center;
+    /* padding-left: 45px; */
+    padding-left: 10px;
+}
+
+.dest-sim-card-t2 {
+    color: white;
+    display: flex;
+    align-items: center;
+    /* padding-left: 45px; */
+    padding-left: 10px;
+}
+.dest-sim-card-amount2{
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+    padding-left: 55px;
+    /* justify-content: center; */
+}
+.dest-sim-card-bt{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 10px;
+    justify-content: center;
+}
+.dest-sim-card-but{
+    background-color: #fcb418;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+
+}
+.dest-sim-card-but1{
+    background-color: #fcb418;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.dest-sim-slide{
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    padding-top: 90px;
+}
+.dest-sim-prev{
+    font-size: 50px;
+    position: absolute;
+    top: 40%;
+    left: -30px;
+    z-index: 2;
+    background: none;
+}
+.dest-sim-next{
+    font-size: 50px;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    background: none;
+}
+.dest-sim-slide-item{
+    /* margin-right: 20px; */
+   
+    margin-left: 10px;
+    width: 250px !important;
+    height: 200px !important;
+    position: relative;
+}
+.dest-sim-slide-item-img{
+    height: 200px;
+    width: 250px;
+    border-radius: 10px;
+}
+.dest-sim-slide-item-title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+     color: white;
+     font-size: 13px;
+} 

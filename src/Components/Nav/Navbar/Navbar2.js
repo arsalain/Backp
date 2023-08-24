@@ -24,13 +24,17 @@ const Navbar2 = () =>{
     }
       
   }
+  const [toggle, setToggle]=useState(false);
 
+  const handleToggle=()=>{
+    setToggle(!toggle);
+  }
  
   
   return (
     <>
     <Sigin open={isOpen} onClose={() => setIsOpen(false)} />
-    <div className={navbar ? "n-wrapper2 active" : "n-wrapper2"} >
+    <div className= {navbar ? "n-wrapper2 active" : "n-wrapper2"}  >
       {/* left */}
       <div className="n-left12">
       <div ><img  className="n-img2" src={bplog}></img></div>
@@ -42,7 +46,7 @@ const Navbar2 = () =>{
       </div>
       {/* right */}
       <div className="n-right2">
-        <div className="n-list2">
+        <div className={toggle ? "n-list2 active": "n-list2 "}>
           <ul  style={{ listStyleType: "none" }}>
             <li>
               <Link to="/" style={{ textDecoration: 'none' , color: "white"}} >
@@ -50,7 +54,7 @@ const Navbar2 = () =>{
               </Link>
             </li>
             <li>
-              <Link to="/dest" style={{ textDecoration: 'none' , color: "white"}} >
+              <Link to="/destination" style={{ textDecoration: 'none' , color: "white"}} >
                 Destination 
               </Link>
             </li>
@@ -58,15 +62,21 @@ const Navbar2 = () =>{
               <Link to="/trek" style={{ textDecoration: 'none' , color: "white"}} >
                 Treks
               </Link>
-            </li>    
-            <div className="n-login2" > 
-           <button className="n-login2-but" onClick={()=>{setIsOpen(true)}}>Login</button>
-        </div>
+            </li>
+            <li>
+              <Link to="/dest" style={{ textDecoration: 'none' , color: "white"}} >
+                Tours
+              </Link>
+            </li> 
+          
         </ul>
       
         </div>
         </div>
-         {/* <div  className="mobile-navbar" >
+         {/*   <div className="n-login2" > 
+           <button className="n-login2-but" onClick={()=>{setIsOpen(true)}}>Login</button>
+        </div>
+        <div  className="mobile-navbar" >
                       <CgMenu  name="menu-outline"
                             className='mobile-nav-icon'
                             onClick={() => setisMobile(true)} />   
@@ -76,8 +86,8 @@ const Navbar2 = () =>{
                             onClick={() => setisMobile(false)}/>
                             
                             </div> */}
-                            <div className="mobile-navbar2">
-                <CgCloseR  className='mobile-nav-icon2' />:   <CgMenu className='mobile-nav-icon2' /> 
+                            <div className="mobile-navbar2" onClick={handleToggle}>
+                            {toggle? <CgCloseR  className='mobile-nav-icon2' />:   <CgMenu className='mobile-nav-icon2' /> }
 
                             </div>
         </div> 

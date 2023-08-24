@@ -40,6 +40,7 @@ const Video = () => {
         <input type="text" placeholder="Search" className='video-search-input'/>
           <button  className='video-search-button'>Explore</button>
         </div>
+        <div className='video-footer-main'>
         <div className='video-footer'>
           <div className='video-rating-icon'><FaRegThumbsUp /></div>
         <div className='video-rating'>
@@ -48,7 +49,7 @@ const Video = () => {
         </div>
         <div className='video-rating-icon'><HiUserGroup /></div>
         <div className='video-rating'>
-      <div className='video-customer'> 1 Lakh<AiOutlinePlus className='video-customer-icon'/></div>
+      <div className='video-customer'> 1 Lakh <AiOutlinePlus className='video-customer-icon'/></div>
           <div>Happy Customers</div>
         </div><div className='video-rating-icon'><IoEarth /></div>
         <div className='video-rating'>
@@ -61,7 +62,7 @@ const Video = () => {
         </div>
         </div>
       </div>
-     
+      </div>
     </div>
   )
 }

@@ -7,7 +7,7 @@ import {IoMdArrowDropdown,IoMdArrowDropup} from "react-icons/io"
 import {VscDebugBreakpointLog} from "react-icons/vsc"
 import {TbPointFilled,TbPoint} from "react-icons/tb"
 import {GrGallery} from "react-icons/gr"
-import {IoIosArrowDropleft,IoIosArrowDropright} from "react-icons/io"
+import {MdArrowRight,MdArrowLeft} from "react-icons/md"
 import kudremukh from "../../Images/Kudremukha.png"
 import stay from "../../Images/satishmullodistay.jpg"
 import KudremukhSight from "../../Images/KudremukhSight.jpg"
@@ -19,7 +19,10 @@ import netravathi from "../../Images/Nethravathi.png"
 import tandiamol from "../../Images/thandiamol.jpg"
 import gokarna from "../../Images/gokarna.jpg"
 import Review from '../../Components/Product/Reviews/Review'
-
+import Album from '../../Components/Product/Album/Album'
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick"
 const Product = () => {
     const [toggleState, setToggleState] = useState(1);
     const [show,setShow] = useState(false)
@@ -52,6 +55,71 @@ const Product = () => {
         para: "Travelling with her favourite pooch. Discover Olivia’s story here. "
       }
     ]
+    const gallery = [
+      {
+        id: 1,
+        imgSrc: jeepride,
+        day: "day1",
+        title: "Jeep ride",
+        para: ""
+      },
+      {
+        id: 2,
+        imgSrc: kudremukh,
+        day: "day1",
+        title: "kudremukh trek",
+        para: ""
+      }
+    ]
+    const ArrowLeft = (props) => (
+      <button
+          {...props}
+          className={'product-sim-prev'}><MdArrowLeft style={{color:"black"}}/> </button>
+  );
+  const ArrowRight = (props) => (
+      <button
+          {...props}
+          className={'product-sim-next'}><MdArrowRight style={{color:"black"}}/> </button>
+  )
+  const sliderRef = React.useRef<Slider>(null);
+    const settings = {
+      dots: true,
+      infinite: true,
+      // autoplay: true,
+      speed: 2000,
+      // autoplaySpeed: 3000,
+      // pauseOnHover: true,
+      slidesToShow: 2,
+      slidesToScroll: 2,
+      nextArrow: <ArrowRight />,
+      prevArrow: <ArrowLeft />,
+      responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 2,
+              infinite: true,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              dots: true
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+        ]
+    };
     const toggleTab = (index) => {
         setToggleState(index);
       };
@@ -64,16 +132,10 @@ const Product = () => {
       const handleShow2 = () =>{
         setShow2(!show2)
       }
-      const Open = () => {
-        setIsOpen(!isOpen)
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    };
   return (
     <>
         <Gallery open={isOpen} onClose={() => setIsOpen(false)} />
+    
     <div >
     
     <div className='product-img'>
@@ -93,11 +155,12 @@ const Product = () => {
         </div>
         </div>
         <div className='product-iternary' >
-            <div className='product-iternary-left'>
+            <div className='product-iternary-left' >
                 <div className='product-iternary-left-line' ></div>
                 <div className='product-iternary-left-title'>Itinerary</div>
-                <div className='product-iternary-left-day0'><div >Day 0 - Bangalore to Kudremukh</div>
-                <div onClick={handleShow} className='product-iternary-left-day0-but'>
+                <div className='product-iternary-left-day'>
+                <div className='product-iternary-left-day0' onClick={handleShow}><div >Day 0 - Bangalore to Kudremukh</div>
+                <div  className='product-iternary-left-day0-but'>
                   {show ? <IoMdArrowDropup className='product-iternary-left-day0-icon' />: 
                   <IoMdArrowDropdown className='product-iternary-left-day0-icon' />}
                   </div></div>
@@ -106,17 +169,16 @@ const Product = () => {
                 {
                   show ?  <div className='product-iternary-left-day0-body' >
                   <div className='product-iternary-left-day0-title'>
-                 <VscDebugBreakpointLog className='product-iternary-left-day0-title-icon' >
-                  </VscDebugBreakpointLog> <div >Transfers from bangalore to Kudremukh via Bus</div></div> 
+                <div >Transfers from bangalore to Kudremukh via Bus</div></div> 
+                  <div className='product-iternary-left-day0-point'>
+                 <TbPointFilled className='product-iternary-left-day0-point-icon'>
+                  </TbPointFilled> <div className='product-iternary-left-day0-point-text'>On Friday, Get picked up in Bangalore from the following points and start your Kudremukh trekking tour.</div></div> 
                   <div className='product-iternary-left-day0-point'>
                  <TbPointFilled className='product-iternary-left-day0-point-icon' >
-                  </TbPointFilled> <div >On Friday, Get picked up in Bangalore from the following points and start your Kudremukh trekking tour.</div></div> 
+                  </TbPointFilled> <div className='product-iternary-left-day0-point-text' >The exact pick-up location and time will be confirmed after the booking.</div></div> 
                   <div className='product-iternary-left-day0-point'>
                  <TbPointFilled className='product-iternary-left-day0-point-icon' >
-                  </TbPointFilled> <div >The exact pick-up location and time will be confirmed after the booking.</div></div> 
-                  <div className='product-iternary-left-day0-point'>
-                 <TbPointFilled className='product-iternary-left-day0-point-icon' >
-                  </TbPointFilled> <div >Pickup locations are:-</div></div> 
+                  </TbPointFilled> <div className='product-iternary-left-day0-point-text'>Pickup locations are:-</div></div> 
                   <div className='product-iternary-left-day0-point-loc'>
                  <TbPoint className='product-iternary-left-day0-point-icon' >
                   </TbPoint> <div >Indranagar</div></div> 
@@ -132,8 +194,10 @@ const Product = () => {
   
                   </div> :null
                 }
-                <div className='product-iternary-left-day1'><div >Day 1 - Sightseeing and Chill</div>
-                <div onClick={handleShow1} className='product-iternary-left-day1-but'>
+                </div>
+                <div className='product-iternary-left-day'>
+                <div className='product-iternary-left-day1' onClick={handleShow1}><div >Day 1 - Sightseeing and Chill</div>
+                <div  className='product-iternary-left-day1-but'>
                   {show1 ? <IoMdArrowDropup className='product-iternary-left-day1-icon' />: 
                   <IoMdArrowDropdown className='product-iternary-left-day1-icon' />}
                   </div></div>
@@ -174,12 +238,14 @@ const Product = () => {
                   </TbPointFilled> <div >Have the lip-smacking dinner and retire for the night.</div></div> 
                   </div> : null 
 }
-<div className='product-iternary-left-day2'><div >Day 2 - Trek and return back to bangalore </div>
-                <div onClick={handleShow2} className='product-iternary-left-day2-but'>
+</div>
+<div className='product-iternary-left-day'>
+<div className='product-iternary-left-day2' onClick={handleShow2}><div >Day 2 - Trek and return back to bangalore </div>
+                <div  className='product-iternary-left-day2-but'>
                   {show2 ? <IoMdArrowDropup className='product-iternary-left-day2-icon' />: 
                   <IoMdArrowDropdown className='product-iternary-left-day2-icon' />}
-                  </div></div>
-
+                  </div>
+</div>
                   { show2 ?  <div className='product-iternary-left-day2-body'><div className='product-iternary-left-day2-title'>
                       <VscDebugBreakpointLog className='product-iternary-left-day2-title-icon' >
                   </VscDebugBreakpointLog> <div >Kudremukh Trek</div>
@@ -205,10 +271,12 @@ const Product = () => {
                   </TbPointFilled> <div >resh up and head to-wards Bangalore. </div></div> 
                   <div className='product-iternary-left-day2-point'>
                  <TbPointFilled className='product-iternary-left-day2-point-icon' >
-                  </TbPointFilled> <div >Return to Bangalore around 3am  and get back home with splendid memories.</div></div> 
-                  </div>
+                  </TbPointFilled> <div >Return to Bangalore around 3am  and get back home with splendid memories.</div></div> </div>
+                 
 
                   : null }
+                  </div>
+                   
                 <div className='product-iternary-left-but'><button className='product-iternary-left-but-bt'>Dowload PDF</button></div>
             </div>
             <div className='product-iternary-right'></div>
@@ -288,51 +356,77 @@ const Product = () => {
             </div>
             </div>
         </div>
-        <div className='product-description'>
-            <div className='product-description-left'>
-            <div className='product-description-left-line' ></div>
-                <div className='product-description-left-title'>Experience</div>
-                <div className='product-description-left-title1'>Kudremukh Trek</div>
-                <div className='product-description-left-para'>Kudremukh is nestled in the 
-                heart of the western ghats in Chikkamagaluru district. It comes under 
-                Kudremukh National Park which is the second-largest wildlife protected 
-                area in the western ghats. Kudremukh is a home for many flora and fauna. 
-                You can even spot deer and peacocks on the way amongst other wildlife while trekking!  
-                It is a beautiful trek across the rolling green hills and misty valleys. 
-              
-
-</div>
+        <div className='product-gal'>
+        <Slider {...settings} useRef={sliderRef}>
+          
+          <div className='product-gal-left'>
+            <div className='product-gal-left-title'>
+              Jeep Ride
             </div>
-            <div className='product-description-right'>
-              <img src={kudremukh} />
-              <div className='product-description-right-img-title'>Adventure</div>
-              </div>
+            <div className='product-gal-left-para'>
+            Experience the thrill of a jeep ride in Kudremukh's rugged terrain. 
+            Enjoy stunning views, off-road excitement, and the untouched beauty of 
+            misty hills and lush forests. It's an adventure you won't forget!
+            </div>
+          </div>
+          <div className='product-gal-right'>
+            <img src={jeepride} className='product-gal-right-img'></img>
+          </div>
+          <div className='product-gal-left'>
+            <div className='product-gal-left-title'>
+            Bhamikonda View point
+            </div>
+            <div className='product-gal-left-para'>
+            Experience the thrill of a jeep ride in Kudremukh's rugged terrain. 
+            Enjoy stunning views, off-road excitement, and the untouched beauty of 
+            misty hills and lush forests. It's an adventure you won't forget!
+            </div>
+          </div>
+          <div className='product-gal-right'>
+            <img src={view} className='product-gal-right-img'></img>
+          </div>
+          <div className='product-gal-left'>
+            <div className='product-gal-left-title'>
+            Stay
+            </div>
+            <div className='product-gal-left-para'>
+            Experience the thrill of a jeep ride in Kudremukh's rugged terrain. 
+            Enjoy stunning views, off-road excitement, and the untouched beauty of 
+            misty hills and lush forests. It's an adventure you won't forget!
+            </div>
+          </div>
+          <div className='product-gal-right'>
+            <img src={stay} className='product-gal-right-img'></img>
+          </div>
+          <div className='product-gal-left'>
+            <div className='product-gal-left-title'>
+            Somawathi Falls
+            </div>
+            <div className='product-gal-left-para'>
+            Experience the thrill of a jeep ride in Kudremukh's rugged terrain. 
+            Enjoy stunning views, off-road excitement, and the untouched beauty of 
+            misty hills and lush forests. It's an adventure you won't forget!
+            </div>
+          </div>
+          <div className='product-gal-right'>
+            <img src={somawathi} className='product-gal-right-img'></img>
+          </div>
+          <div className='product-gal-left'>
+            <div className='product-gal-left-title'>
+            Kudremukh Trek
+            </div>
+            <div className='product-gal-left-para'>
+            Experience the thrill of a jeep ride in Kudremukh's rugged terrain. 
+            Enjoy stunning views, off-road excitement, and the untouched beauty of 
+            misty hills and lush forests. It's an adventure you won't forget!
+            </div>
+          </div>
+          <div className='product-gal-right'>
+            <img src={KudremukhSight} className='product-gal-right-img'></img>
+          </div>
+        </Slider>
         </div>
-        <div className='product-description-img' >
-          <div className='product-description-img-left' >
-        <img src={stay} />
-              <div className='product-description-img-left-title'>Stay</div>
-              </div>
-              <div className='product-description-img-right' >
-        <img src={KudremukhSight} />
-              <div className='product-description-img-right-title'>Sightseeing</div>
-              </div>
-        </div>
-        <div className='product-description-img1' >
-          <div className='product-description-img1-left' >
-        <img src={jeepride} />
-              <div className='product-description-img1-left-title'>Jeep Ride</div>
-              </div>
-              <div className='product-description-img1-center' >
-        <img src={view} />
-              <div className='product-description-img1-right-title'>View point</div>
-              </div>
-              <div className='product-description-img1-right' >
-        <img src={somawathi} />
-              <div className='product-description-img1-right-title'>Somawathi Falls</div>
-              <button className='product-description-img1-right-but' onClick={()=>{setIsOpen(true)}}><GrGallery className='product-description-img1-right-but-icon'></GrGallery>Gallery</button>
-              </div>
-        </div>
+       
         <div className='similar-body'>
         <div className='similar-body-intro-line'></div>
             <div className='similar-intro'>
@@ -379,23 +473,6 @@ const Product = () => {
         </div>
         <div className='reviews-body'>
           <Review  slides={data} />
-            {/* <div className='reviews-left'>
-              <img src= {gokarna} className='reviews-left-img'></img>
-                <div className='reviews-left-arrows'>
-                  <IoIosArrowDropleft />
-                  <IoIosArrowDropright />
-                </div>
-                <div className='reviews-left-box'>
-                  <div className='reviews-left-title' >
-                      Enma Story
-                  </div>
-                  <div className='reviews-left-para' >
-                  Emma was under pressure to bring together the ideal trip for her family
-                   with only six weeks to go the clock was ticking, she chose Epic to help 
-                   her because of their responsiveness and pragmatism.
-                  </div>
-                </div>
-            </div> */}
             <div className='reviews-right'>
             <div className='reviews-right-line'></div>
                 <div className='reviews-right-title' >Epic Stories</div>

@@ -19,17 +19,22 @@
     /* justify-content: center; */
 }
 .i-dest-t1 {
-    padding-top: 50px;
-    font-size: 18px;
-    color: rgb(214, 162, 48);
+    padding-top: 30px;
+    font-size: 28px;
+    font-family: "Mansalva";
+    color: #FCB418;
 }
 .i-dest-t2 {
     font-size: 40px;
-    color: rgb(214, 162, 48);
+    color: white;
+    /* color: rgb(214, 162, 48); */
 }
 .i-destt {
-    padding-left: 250px;
-    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* padding-left: 250px; */
+    padding-top: 60px; 
 }
 .i-dest-card{
     height:320px;
@@ -43,16 +48,24 @@
     height: 230px;
     width: 220px;
 }
+.card-name{
+    padding-top: 10px;
+    font-weight: bold;
+}
 .card-name1{
     float: left;
-    padding-left: 15px;
+    padding-left: 10px;
 }
 .card-name2{
-    margin-left: 140px !important;
+    margin-left: 150px !important;
+    display: flex;
+    align-items: center;
 }
 .card-name3{
     margin-top: 15px;
     margin-left: 12px !important;
+    display: flex;
+    align-items: center;
     float: left;
 }
 .card-name33{
@@ -135,9 +148,74 @@
     .card-name2{
         margin-left: 100px !important;
     }
-    .card-name33{
+    .card-name3{
         margin-top: 5px;
         margin-left: 12px !important;
         float: left;
     }
+  }
+  @media only screen and (max-width: 480px) {
+  
+    .i-dest {
+        /* flex-direction: row; */
+        width: auto;
+        height: 100%;
+      }
+
+.i-dest-t1 {
+    padding-top: 30px;
+    font-size: 12px;
+}
+.i-dest-t2 {
+    font-size: 25px;
+}
+.i-destt {
+    padding-top: 40px;
+    flex-direction: column;
+}
+.i-dest2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+   /* margin-left: 80px; */
+}
+.i-dest-card{
+    height: 250px;
+    width: 200px;
+}
+.i-dest-card1{
+    margin-left: 0;
+    height: 250px;
+    width: 200px;
+}
+.i-dest-card2{
+    margin-left: 0;
+    height: 250px;
+    width: 200px;
+    margin-bottom: 40px;
+}
+.i-dest-card img{
+    height: 170px;
+    width: 200px;
+}
+.i-dest-card1 img{
+    height: 170px;
+    width: 200px;
+}
+.i-dest-card2 img{
+    height: 170px;
+    width: 200px;
+
+}
+.card-name1{
+    padding-left: 10px;
+}
+.card-name2{
+    margin-left: 130px !important;
+}
+.card-name3{
+    margin-top: 15px;
+    margin-left: 12px !important;
+    float: left;
+}
   }

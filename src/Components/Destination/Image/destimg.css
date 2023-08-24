@@ -1,0 +1,81 @@
+.destimg{
+    margin: 0;
+    width: 100vw;
+    height: 100%;
+    position: relative;
+}
+.destimg-main{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+}
+.destimg-head{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0 ;
+    display: flex;
+    flex-direction: column;
+}
+.destimg-head-title{
+    color: white;
+    font-weight: bold;
+    top: 130px;
+    left: 40%;
+    position: absolute;
+}
+.destimg-body{
+    width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 50px;
+    padding-right: 30px;
+    padding-top: 90px;
+    padding-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+}
+.destimg-body-title{
+    font-weight: bold;
+}
+.destimg-body-top{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+.destimg-body-middle{
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    gap:10px;
+}
+.destimg-body-last{
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    gap:10px;
+}
+.destimg-body-img{
+    position: relative;
+}
+.destimg-body-i{
+    width: 284px;
+    height: 284px;
+    border-radius: 10px;
+}
+.destimg-body-name{
+    color: #FCB418;
+    font-weight: bold;
+    bottom: 50px;
+    left: 35%;
+    position: absolute;
+}
+.destimg-body-name1{
+    color: white;
+    font-weight: bold;
+    bottom: 25px;
+    left: 38%;
+    position: absolute;
+}

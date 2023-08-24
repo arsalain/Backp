@@ -1,20 +1,20 @@
 .p {
    
-    max-width: 1300px;
+    width: 1300px;
 display: flex;
-align-items: center;
-justify-content: center;
-    padding-top: 100px;
+/* /* align-items: center; */
+justify-content: center; 
+flex-direction: row;
+    padding-top: 90px;
+    padding-bottom: 90px;
     margin-left:auto;
     margin-right:auto;
 }
 .p-left {
-    float: left;
-    height:600px !important;
     width: 400px;
+    /* padding-left: 20px; */
     border-radius: 30px 50px;
-    padding-top: 50px;
-    background: url(../../../Images/dest.jpg) ;
+    background: url(../../../Images/pointsimg.jpg) ;
     background-size:cover;
     background-repeat:no-repeat;
 } 
@@ -23,32 +23,40 @@ justify-content: center;
         width: 60px;
         border-radius: 50%;
         background-color: rgb(220, 171, 12);
-        margin-left: 30px;
+        /* margin-left: 30px; */
         margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .p-card-nam-icon{
+        font-size: 40px;
+        /* padding-left: 10px; */
     }
     .p-card-log {
         float: left;
         height: 200px;
-        width: 120px;
+        width: 140px;
         background-color: rgb(45, 44, 44);
-        margin-top: -50px;
-        margin-left: -100px;
+        margin-top: -20px;
+        margin-left: -80px;
         border-radius: 10px;
         display: flex;
+        align-items: center;
         flex-direction: column;
     } 
     .p-num-log {
         font-size: 35px;
+     
         color: rgb(214, 162, 48);
-        padding-top: 15px;
+        padding-top: 20px;
         justify-content: center;
         display:flex ;
         font-weight: bolder;
-        padding-top: 30px;
     }
     .p-num-icon {
         padding-top: 10px;
-        font-size: 30px;
+        font-size: 25px;
         color: rgb(214, 162, 48);
     }
   
@@ -59,8 +67,8 @@ justify-content: center;
         width: 180px;
         background-color: rgb(45, 44, 44);
         /* margin-top: -50px; */
-        /* margin-left: -100px; */
-        margin-top: 400px;
+        margin-right: -50px;
+        margin-top: 380px;
         border-radius: 10px;
         display: flex;
         flex-direction: column;
@@ -71,6 +79,7 @@ justify-content: center;
         color: rgb(214, 162, 48);
         display: flex;
         flex-direction: row;
+        padding-left: 1px;
         /* padding-right: 40px; */
     }
     .p-card-nam2{
@@ -84,10 +93,11 @@ justify-content: center;
         font-size: 30px;
         /* margin-top:20px; */
         margin-bottom: 10px;
-        margin-left: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
         height: 30px;
         width: 30px;
-        background-color: grey;
+    
     }
     .p-num-log1 {
         font-size: 35px;
@@ -99,6 +109,7 @@ justify-content: center;
     }
 .p-right {
     padding-top: 50px;
+    padding-left: 70px;
    
 }
 .p-head{
@@ -109,21 +120,24 @@ justify-content: center;
 } 
 .p-name{
     padding-left: 50px;
-    color: rgb(245, 168, 25);
-    font-size: 21px;
+    color: #FCB418;
+    font-size: 28px;
+    font-family: 'Mansalva';
+    font-weight: bold;
 }
 .p-title1{
     padding-left: 50px;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
 }
 .p-title2{
     padding-left: 50px;
-    font-size: 50px;
+    font-size: 40px;
     font-weight: bold;
     padding-bottom: 15px;
 }
 .p-para1 {
+    width: 450px;
     padding-left: 50px;
     font-size: 18px;
 }
@@ -147,17 +161,154 @@ justify-content: center;
     padding-left: 20px;
     font-weight: bolder;
 }
+.p-num-right-icon {
+    padding-top: 10px;
+    font-size: 25px;
+    color: rgb(214, 162, 48);
+}
 .p-card-name{
-    font-size: 23px;
+    font-size: 20px;
     color: rgb(214, 162, 48);
     /* padding-right: 60px; */
     padding-top: 25px;
     padding-left: 15px;
 }
 .p-card-name1{
-    font-size: 23px;
+    font-size: 20px;
     color: rgb(214, 162, 48);
     padding-left: 15px;
     /* padding-right: 40px; */
 }
+@media only screen and  (min-width:500px) and (max-width: 999px) {
+    .p {
+        flex-direction: column;
+        width: auto;
+    }
+    .p-name{
+        padding-left: 30px;
+    }
+    .p-title1{
+        padding-left: 30px;
+    }
+    .p-title2{
+        padding-left: 30px;
+    }
+    .p-para1{
+        padding-left: 30px;
+        /* width: 320px; */
+    }
+    .p-left-box1 {
+        margin-right: -50px;
+    }
+   .p-card{
+    height: 140px;
+    width: 130px;
+    margin-left: 30px;
+   }
+   .p-num {
+    font-size: 30px;
+    padding-top: 2px;
+   }
+   .p-num-right-icon{
+    font-size: 25px;
+   }
+   .p-card-name{
+    font-size: 20px;
+    padding-top: 22px;
+   }
+   .p-card-name1{
+    font-size: 20px;
+   }
+}
 
+@media only screen and (max-width: 480px) {
+    .p {
+        flex-direction: column;
+        width: auto;
+    }
+    .p-left {
+        height: 400px;
+        width: 300px;
+    }
+    .p-card-log{
+        height: 120px;
+        width: 80px;
+        margin-top: 0px;
+        margin-left: -40px;
+        border-radius: 5px;
+    }
+    .p-num-log{
+        padding-top: 15px;
+        font-size: 25px;
+    }
+    .p-num-icon {
+        padding-top: 7px;
+        font-size: 22px;
+    }
+    .p-card-nam1 {
+        font-size: 13px;
+        padding-left: 7px;
+    }
+    .p-card-nam {
+        height: 30px;
+        width: 30px;
+        margin-top: 10px;
+        margin-left: 25px;
+    }
+    .p-left-box1 {
+      height: 70px;
+      width: 100px;
+      margin-top: 280px;
+      margin-right: -20px;
+      border-radius: 5px;
+    }
+    .p-card-logo{
+        margin:0px;
+        font-size: 25px;
+    }
+.p-num-log1 {
+    font-size: 25px;
+    margin-top: 0px ;
+}
+.p-card-nam2 {
+    font-size: 13px;
+    padding-left: 30px;
+}
+.p-name{
+    padding-left: 30px;
+}
+.p-title1{
+    padding-left: 30px;
+    font-size: 35px;
+}
+.p-title2{
+    padding-left: 30px;
+    font-size: 35px;
+}
+.p-para1{
+    padding-left: 30px;
+    width: 320px;
+}
+   .p-card{
+    height: 100px;
+    width: 90px;
+    margin-left: 30px;
+   }
+   .p-num {
+    font-size: 25px;
+    padding-top: 0px;
+    padding-left: 15px;
+   }
+   .p-num-right-icon{
+    font-size: 20px;
+   }
+   .p-card-name{
+    font-size: 16px;
+    padding-top: 12px;
+    padding-left: 5px;
+   }
+   .p-card-name1{
+    font-size: 16px;
+    padding-left: 5px;
+   }
+}
